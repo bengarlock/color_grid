@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#root {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.color-box {
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    transition: 6s;
+}
+
+.color-box:hover {
+    background-color: white;
+
+}
