@@ -12,7 +12,7 @@
     width: 100vw;
     overflow: hidden;
     display: flex;
-    justify-content: stretch;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: black;
@@ -22,7 +22,7 @@
     margin: 2px;
     width: 30px;
     height: 30px;
-    transition: 6s;
+    transition: 4s;
 }
 
 .color-box:hover {
@@ -32,7 +32,7 @@
 #title-wrapper {
     position: absolute;
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     top:50%;
     transform: translate(0, -50%);
     background-color: #4257f8;

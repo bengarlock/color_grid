@@ -2,6 +2,8 @@ const root = document.getElementById("root")
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
+
     class renderDivs {
 
         constructor(number) {
@@ -57,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function runBackgroundChanges() {
+
         let index = 0
         while (index < Infinity) {
             await new Promise(r => setTimeout(r, 1000));
@@ -65,11 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const divs = new renderDivs(2000)
-    divs.divs.map(div => root.appendChild(div))
+    const calcGridBoxes = () => {
+        const boxCountHeight = Math.round(document.body.scrollWidth / 33)
+        const boxCountWidth = Math.round(document.body.scrollHeight / 33)
+        const boxCount = boxCountHeight * boxCountWidth
+        const divs = new renderDivs(boxCount)
+        divs.divs.map(div => root.appendChild(div))
+    }
 
+    calcGridBoxes()
     runBackgroundChanges()
 
-
-
+    window.addEventListener('resize', ()=> {
+        calcGridBoxes()
+    })
 })
