@@ -59,10 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function runBackgroundChanges() {
-
         let index = 0
         while (index < Infinity) {
-            await new Promise(r => setTimeout(r, 1000));
+            await new Promise(r => setTimeout(r, 2000));
             changeBackgrounds()
             index++
         }
