@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,10 @@
 }
 
 #root {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
     justify-content: stretch;
     flex-direction: row;
@@ -21,5 +27,26 @@
 
 .color-box:hover {
     background-color: white;
+}
 
+#title-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    top:50%;
+    transform: translate(0, -50%);
+    background-color: #4257f8;
+    opacity: 75%;
+    z-index: 3;
+}
+
+#title {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100pt;
+    user-select: none;
 }
